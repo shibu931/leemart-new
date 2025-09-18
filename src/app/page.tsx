@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const technologies = [
@@ -64,11 +65,13 @@ export default function Home() {
                 
                 {/* Hero Image */}
                  <div className="relative z-10 w-80 h-96 lg:w-96 lg:h-[500px]">
-                   <img 
-                        src="/women2.png" 
-                        alt="Woman holding a clean glass of water" 
-                        className="w-full h-full object-cover rounded-2xl shadow-2xl"
-                      />
+                   <Image
+                src="/women2.png"
+                alt="Woman holding a clean glass of water"
+                width={384}
+                height={500}
+                className="w-full h-full object-cover rounded-2xl shadow-2xl"
+              />
                  </div>
                 
                 {/* Floating elements around the image */}
@@ -262,8 +265,8 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6 italic">
-                  "The water quality has improved dramatically since installing Leemart's RO system. 
-                  Our family feels much safer drinking the water now. Excellent service and support!"
+                  &quot;The water quality has improved dramatically since installing Leemart&apos;s RO system. 
+                  Our family feels much safer drinking the water now. Excellent service and support!&quot;
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mr-4 shadow-lg">
@@ -287,8 +290,8 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6 italic">
-                  "Leemart's industrial water treatment solution has significantly reduced our operational costs 
-                  while ensuring consistent water quality. Highly recommended for businesses!"
+                  &quot;Leemart&apos;s industrial water treatment solution has significantly reduced our operational costs 
+                  while ensuring consistent water quality. Highly recommended for businesses!&quot;
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mr-4 shadow-lg">
@@ -312,8 +315,8 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6 italic">
-                  "The smart monitoring feature is amazing! I can check water quality from my phone. 
-                  The installation was professional and the team was very knowledgeable."
+                  &quot;The smart monitoring feature is amazing! I can check water quality from my phone. 
+                  The installation was professional and the team was very knowledgeable.&quot;
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mr-4 shadow-lg">

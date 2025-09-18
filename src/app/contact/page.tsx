@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 
 // Note: This would normally be in a separate file for metadata
 // export const metadata: Metadata = {
@@ -44,7 +44,8 @@ export default function Contact() {
       console.log('Form submitted:', formData);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', message: '' });
-    } catch (error) {
+    } catch {
+      // console.error('Error submitting form:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -101,7 +102,7 @@ export default function Contact() {
               <Card className="border-0 shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-2xl text-gray-900">Send us a Message</CardTitle>
-                  <p className="text-gray-600">Fill out the form below and we'll get back to you within 24 hours.</p>
+                  <p className="text-gray-600">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -162,7 +163,7 @@ export default function Contact() {
                     
                     {submitStatus === 'success' && (
                       <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-                        <p className="text-green-800">✅ Thank you! Your message has been sent successfully. We'll contact you soon.</p>
+                        <p className="text-green-800">✅ Thank you! Your message has been sent successfully. We&apos;ll contact you soon.</p>
                       </div>
                     )}
                     
@@ -304,7 +305,7 @@ export default function Contact() {
             
             <Card className="border-0 shadow-md">
               <CardContent className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">What's included in the warranty?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">What&apos;s included in the warranty?</h3>
                 <p className="text-gray-600">All our systems come with a 2-year comprehensive warranty covering parts, labor, and system performance.</p>
               </CardContent>
             </Card>

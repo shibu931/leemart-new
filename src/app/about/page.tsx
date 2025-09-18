@@ -125,7 +125,7 @@ export default function About() {
                   What started as a small team of water treatment specialists has grown into a leading provider of advanced purification solutions.
                 </p>
                 <p className="text-lg">
-                  Our journey has been driven by continuous innovation and an unwavering commitment to quality. We've pioneered the integration of 
+                  Our journey has been driven by continuous innovation and an unwavering commitment to quality. We&apos;ve pioneered the integration of 
                   RO, UV, and alkaline technologies to create comprehensive water treatment systems that exceed industry standards.
                 </p>
                 <p className="text-lg">
