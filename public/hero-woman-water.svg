@@ -1,0 +1,58 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="200" cy="250" r="180" fill="url(#gradient1)" opacity="0.1"/>
+  
+  <!-- Woman's body -->
+  <ellipse cx="200" cy="420" rx="60" ry="80" fill="#E8F4FD"/>
+  
+  <!-- Woman's torso -->
+  <rect x="170" y="320" width="60" height="100" rx="30" fill="#3B82F6"/>
+  
+  <!-- Woman's head -->
+  <circle cx="200" cy="180" r="45" fill="#FBBF24"/>
+  
+  <!-- Hair -->
+  <path d="M155 160 Q200 120 245 160 Q240 140 200 135 Q160 140 155 160" fill="#92400E"/>
+  
+  <!-- Face features -->
+  <circle cx="185" cy="175" r="3" fill="#374151"/>
+  <circle cx="215" cy="175" r="3" fill="#374151"/>
+  <path d="M190 190 Q200 200 210 190" stroke="#374151" stroke-width="2" fill="none"/>
+  
+  <!-- Left arm -->
+  <ellipse cx="150" cy="280" rx="15" ry="40" fill="#FBBF24" transform="rotate(-20 150 280)"/>
+  
+  <!-- Right arm holding glass -->
+  <ellipse cx="250" cy="280" rx="15" ry="40" fill="#FBBF24" transform="rotate(20 250 280)"/>
+  
+  <!-- Hand holding glass -->
+  <circle cx="270" cy="250" r="12" fill="#FBBF24"/>
+  
+  <!-- Glass of water -->
+  <rect x="275" y="220" width="25" height="40" rx="3" fill="none" stroke="#6B7280" stroke-width="2"/>
+  <rect x="277" y="222" width="21" height="35" fill="#DBEAFE"/>
+  
+  <!-- Water in glass with bubbles -->
+  <rect x="277" y="235" width="21" height="22" fill="#3B82F6" opacity="0.3"/>
+  <circle cx="285" cy="240" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="290" cy="245" r="1" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="282" cy="248" r="1.2" fill="#FFFFFF" opacity="0.7"/>
+  
+  <!-- Water droplets around glass -->
+  <circle cx="305" cy="210" r="2" fill="#3B82F6" opacity="0.6"/>
+  <circle cx="315" cy="225" r="1.5" fill="#06B6D4" opacity="0.5"/>
+  <circle cx="310" cy="240" r="1.8" fill="#0EA5E9" opacity="0.4"/>
+  
+  <!-- Sparkles around water -->
+  <path d="M320 200 L322 205 L327 203 L322 208 L320 213 L318 208 L313 203 L318 205 Z" fill="#FBBF24" opacity="0.8"/>
+  <path d="M300 190 L301 193 L304 192 L301 195 L300 198 L299 195 L296 192 L299 193 Z" fill="#06B6D4" opacity="0.7"/>
+  <path d="M330 235 L331 237 L333 236 L331 238 L330 240 L329 238 L327 236 L329 237 Z" fill="#0EA5E9" opacity="0.6"/>
+  
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
