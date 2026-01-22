@@ -5,7 +5,7 @@ import { products as dataProducts } from "../../../data/products";
 export const metadata: Metadata = {
   title: "Products - Leemart",
   description:
-    "Explore Leemart water purification products for homes, offices, and industries.",
+    "Explore Leemart water purification products for homes, offices, and industries etc.",
 };
 
 export default function Products() {
