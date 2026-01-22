@@ -1,5 +1,4 @@
 import ProductsCatalog from "@/components/ProductsCatalog";
-import Link from "next/link";
 import type { Metadata } from "next";
 import { products as dataProducts } from "../../../data/products";
 
