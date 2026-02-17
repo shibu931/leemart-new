@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ContactDialog } from "@/components/ContactDialog";
 
 const products = [
   {
@@ -131,9 +132,11 @@ export default function ProductDetail({
                 ))}
               </div>
               <div className="mt-8 flex gap-3">
-                <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600">
-                  <Link href="/contact">Request a Quote</Link>
-                </Button>
+                <ContactDialog productName={product.name}>
+                  <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600">
+                    Request a Quote
+                  </Button>
+                </ContactDialog>
                 <Button variant="outline">
                   <Link href="/services">Related Services</Link>
                 </Button>

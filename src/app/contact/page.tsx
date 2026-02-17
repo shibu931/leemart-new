@@ -8,7 +8,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 // import type { Metadata } from "next";
 
-// Note: This would normally be in a separate file for metadata
 // export const metadata: Metadata = {
 //   title: "Contact Leemart - Get Your Water Purification Quote",
 //   description: "Contact Leemart for water purification solutions. Get a free quote, schedule consultation, or reach our support team.",
@@ -55,21 +54,21 @@ export default function Contact() {
   const contactInfo = [
     {
       title: "Email",
-      value: "info@leemart.com",
+      value: "info@leemartro.com",
       icon: "📧",
-      link: "mailto:info@leemart.com"
+      link: "mailto:info@leemartro.com"
     },
     {
       title: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+91 8076 602 998",
       icon: "📞",
       link: "tel:+15551234567"
     },
     {
       title: "Address",
-      value: "123 Water Street, Clean City, CC 12345",
+      value: "34-35, Balaji Complex, 102 first floor, Shakarpur, 110092 Delhi 110092",
       icon: "📍",
-      link: "https://maps.google.com/?q=123+Water+Street+Clean+City+CC+12345"
+      link: "https://maps.app.goo.gl/ARRJBPMBUb9nMb5H9"
     },
     {
       title: "Business Hours",
@@ -144,7 +143,7 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="mt-1"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+91 1234 123 123"
                       />
                     </div>
                     
@@ -220,22 +219,6 @@ export default function Contact() {
                   </Card>
                 ))}
               </div>
-              
-              {/* Emergency Contact */}
-              <Card className="border-0 shadow-md bg-gradient-to-r from-red-50 to-orange-50">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="text-2xl">🚨</div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">Emergency Service</h3>
-                      <p className="text-gray-600 mb-2">24/7 emergency water system support</p>
-                      <a href="tel:+15551234567" className="text-red-600 hover:text-red-800 font-semibold">
-                        +1 (555) 123-4567
-                      </a>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
@@ -253,7 +236,7 @@ export default function Contact() {
             <div className="aspect-w-16 aspect-h-9">
               {/* Google Maps Embed */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890123!2d-74.0059413!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjAiTiA3NMKwMDAnMjEuNCJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7003.66445434226!2d77.284836!3d28.63479!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce352dc1a1cfd%3A0x2dfa778fc87245d1!2sD.S.%20Corporations!5e0!3m2!1sen!2sin!4v1770530466153!5m2!1sen!2sin"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
@@ -266,11 +249,11 @@ export default function Contact() {
             <div className="p-6 bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Leemart Headquarters</h3>
-                  <p className="text-blue-100">123 Water Street, Clean City, CC 12345</p>
+                  <h3 className="text-xl font-semibold mb-2">DS Corporation</h3>
+                  <p className="text-blue-100">34-35, Balaji Complex, 102 first floor, Shakarpur, 110092 Delhi 110092</p>
                 </div>
                 <Button className="bg-white text-blue-600 hover:bg-gray-100">
-                  <a href="https://maps.google.com/?q=123+Water+Street+Clean+City+CC+12345" target="_blank" rel="noopener noreferrer">
+                  <a href="https://maps.app.goo.gl/ARRJBPMBUb9nMb5H9" target="_blank" rel="noopener noreferrer">
                     Get Directions
                   </a>
                 </Button>

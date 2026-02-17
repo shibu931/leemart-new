@@ -8,6 +8,7 @@ import Link from "next/link";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Home, Building2, Factory } from "lucide-react";
 import Image from "next/image";
+import { ContactDialog } from "@/components/ContactDialog";
 
 type Product = {
   name: string;
@@ -32,13 +33,9 @@ export default function ProductsCatalog({ products }: { products: Product[] }) {
   const [categories, setCategories] = useState<Record<Product["category"], boolean>>({
     Residential: true,
     Commercial: true,
-    Industrial: true,
   });
-  const [currentPage, setCurrentPage] = useState(1);
-  const ITEMS_PER_PAGE = 4;
 
   const filtered = useMemo(() => {
-    setCurrentPage(1); // Reset page on filter change
     const activeCats = Object.entries(categories)
       .filter(([, v]) => v)
       .map(([k]) => k as Product["category"]);
@@ -62,12 +59,6 @@ export default function ProductsCatalog({ products }: { products: Product[] }) {
     });
     return list;
   }, [products, search, sort, categories]);
-
-  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
-  const paginatedList = filtered.slice(
-    (currentPage - 1) * ITEMS_PER_PAGE,
-    currentPage * ITEMS_PER_PAGE
-  );
 
   const sortLabel = {
     name_asc: "Name A–Z",
@@ -150,11 +141,6 @@ export default function ProductsCatalog({ products }: { products: Product[] }) {
                 label: "Commercial",
                 icon: <Building2 className="size-4" />,
               },
-              {
-                key: "Industrial" as const,
-                label: "Industrial",
-                icon: <Factory className="size-4" />,
-              },
             ].map((opt) => {
               const selected = categories[opt.key];
               return (
@@ -193,11 +179,11 @@ export default function ProductsCatalog({ products }: { products: Product[] }) {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 relative gap-8">
-        <div className="hidden lg:block lg:sticky">{Filters}</div>
+        <div className="hidden lg:block lg:sticky lg:top-24 lg:self-start">{Filters}</div>
 
         <div className="lg:col-span-3">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            {paginatedList.map((product) => (
+            {filtered.map((product) => (
               <Card
                 key={product.slug}
                 className="group bg-white border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 h-full hover:-translate-y-1 overflow-hidden"
@@ -208,7 +194,7 @@ export default function ProductsCatalog({ products }: { products: Product[] }) {
                     alt={product.name}
                     width={640}
                     height={320}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                   {/* Badges */}
                   <div className="absolute top-2 left-2 flex flex-col gap-2">
@@ -261,9 +247,11 @@ export default function ProductsCatalog({ products }: { products: Product[] }) {
                   </ul>
 
                   <div className="flex gap-3 mt-auto pt-4 border-t border-gray-100">
-                    <Button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-sm transition-all hover:shadow-md" size="sm">
-                      <Link href="/contact" className="w-full text-center">Order Now</Link>
-                    </Button>
+                    <ContactDialog productName={product.name}>
+                      <Button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-sm transition-all hover:shadow-md" size="sm">
+                        Order Now
+                      </Button>
+                    </ContactDialog>
                     <Button variant="outline" className="flex-1 border-blue-200 text-blue-700 hover:bg-blue-50 hover:text-blue-800" size="sm">
                       <Link href={`/products/${product.slug}`} className="w-full text-center">Details</Link>
                     </Button>
@@ -272,40 +260,6 @@ export default function ProductsCatalog({ products }: { products: Product[] }) {
               </Card>
             ))}
           </div>
-
-          {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                disabled={currentPage === 1}
-              >
-                Previous
-              </Button>
-              <div className="flex items-center gap-1">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <Button
-                    key={page}
-                    variant={currentPage === page ? "default" : "outline"}
-                    size="sm"
-                    className="w-8 h-8 p-0"
-                    onClick={() => setCurrentPage(page)}
-                  >
-                    {page}
-                  </Button>
-                ))}
-              </div>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-                disabled={currentPage === totalPages}
-              >
-                Next
-              </Button>
-            </div>
-          )}
         </div>
       </div>
     </div>

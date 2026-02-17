@@ -22,6 +22,21 @@ export default function Home() {
     }
   ];
 
+    const clients = [
+    "/clients/client001.jpg",
+    "/clients/client002.png",
+    "/clients/client003.jpeg",
+    "/clients/client004.jpeg",
+    "/clients/client005.png",
+    "/clients/client006.jpeg",
+    "/clients/client007.png",
+    "/clients/client008.jpeg",
+    "/clients/client009.png",
+    "/clients/client010.png",
+    "/clients/client011.jpg",
+    "/clients/client012.jpg",
+  ];
+
   return (
     <div className="">
       {/* Hero Section */}
@@ -70,7 +85,7 @@ export default function Home() {
                 alt="Woman holding a clean glass of water"
                 width={384}
                 height={500}
-                className="w-full h-full object-cover rounded-2xl shadow-2xl"
+                className="w-full h-full object-cover rounded-2xl"
               />
                  </div>
                 
@@ -241,6 +256,35 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+            {/* Our Trusted Clients */}
+            <section className="py-20 bg-white">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-16">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Our Trusted Clients
+                  </h2>
+                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    We are proud to serve a diverse range of clients, from residential homes to large industrial facilities.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                  {clients.map((client, index) => (
+                    <div key={index} className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:shadow-md transition-shadow duration-300">
+                      <div className="relative w-full h-24">
+                        <Image
+                          src={client}
+                          alt={`Client ${index + 1}`}
+                          fill
+                          className="object-contain transition-all duration-300"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">

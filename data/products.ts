@@ -269,4 +269,251 @@ export const products = [
     },
     tags: ["high-flow", "efficient"]
   },
+  {
+    id: 10,
+    name: "Leemart 50 LPH Water Purifier",
+    price: {
+      current: 12000,
+      original: 15000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Commercial",
+    image: "/Products/Commercial/Leemart_50_lph_water_purifier.webp",
+    description: "Compact cabinet-style RO system designed for high-demand environments like offices and small cafes.",
+    featured: false,
+    feature: [
+      "Fully Stainless Steel Body",
+      "Purification Technology : RO",
+      "50 Liter Per Hour, Two 150 Gpd Booster Pump, Four Pices Membrane And One Activated Carbon Filter",
+      "Max. Duty Cycle Per Day 500 Litre Suitable For Home, Office, Hotel, Restaurant, Cafe and Factory"
+    ],
+    techSpecs: {
+      technology: ["RO", "Activated Carbon"],
+      stagesOfPurification: 5,
+      storageCapacity: "Optional External",
+      purificationCapacity: "50 LPH",
+      maxTDS: 1500,
+      material: "Stainless Steel"
+    },
+    dimensions: {
+      height: "90 cm",
+      width: "30 cm",
+      depth: "60 cm",
+      weight: "50 kg"
+    },
+    tags: ["Commercial RO", "50 LPH", "Office Purifier"]
+  },
+  {
+    id: 11,
+    name: "Leemart 100 LPH Water Purifier",
+    price: {
+      current: 28000,
+      original: 35000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Commercial",
+    image: "/Products/Commercial/Leemart_100_lph_water_purifier.webp",
+    description: "Heavy-duty wall-mounted purifier with US-imported membranes for superior filtration up to 4000 TDS.",
+    featured: false,
+    feature: [
+      "Multi stage water purification technology",
+      "Hi Quality US Import RO Membrane 4 pcs works up to 4000 tds",
+      "Stainless steel body with high performing 300 GPD booster pump",
+      "Wall Mounted Product no need extra Stand for Installation."
+    ],
+    techSpecs: {
+      technology: ["RO", "UV", "UF"],
+      stagesOfPurification: 7,
+      storageCapacity: "7 Liters (Internal buffer)",
+      purificationCapacity: "100 LPH",
+      maxTDS: 4000,
+      material: "Stainless Steel / ABS"
+    },
+    dimensions: {
+      height: "90 cm",
+      width: "55 cm",
+      depth: "30 cm",
+      weight: "32 kg"
+    },
+    tags: ["High TDS", "100 LPH", "Wall Mounted"]
+  },
+  {
+    id: 12,
+    name: "Leemart 500 LPH Water Purifier",
+    price: {
+      current: 100000,
+      original: 125000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Commercial",
+    image: "/Products/Commercial/Leemart_500_lph_water_purifier.webp",
+    description: "Industrial grade RO plant with auto-flush function and NSF certified membranes for continuous operation.",
+    featured: false,
+    feature: [
+      "Automatic 500 LPH RO Plant Industrial Machine with Auto-flush Function",
+      "NSF Certified BW 4040 Reverse Osmosis Membrane 2 Nos",
+      "Maximum Duty cycle per day: 11000 Ltr or 22 Hours Operation"
+    ],
+    techSpecs: {
+      technology: ["Industrial RO", "Antiscalant Dosing"],
+      stagesOfPurification: 6,
+      storageCapacity: "External Tank Required",
+      purificationCapacity: "500 LPH",
+      maxTDS: 3000,
+      material: "SS 304 / Powder Coated MS"
+    },
+    dimensions: {
+      height: "150 cm",
+      width: "120 cm",
+      depth: "70 cm",
+      weight: "250 kg"
+    },
+    tags: ["Industrial RO", "RO Plant", "Large Scale"]
+  },
+  {
+    id: 13,
+    name: "Leemart 1000 LPH Water Purifier",
+    price: {
+      current: 140000,
+      original: 175000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Commercial",
+    image: "/Products/Commercial/Leemart_1000_lph_water_purifier.webp",
+    description: "Fully automatic industrial plant featuring high-performance copper winded pumps and 8-stage filtration.",
+    featured: false,
+    feature: [
+      "Fully automatic RO water purifier with AUTO SHUT OFF Function",
+      "This filter removes objectionable Taste and Odors to enhance the quality of your drinking water.",
+      "Fully Stainless Steel Body With Two 100 GPD High Performance Copper Winded Booster Pump"
+    ],
+    techSpecs: {
+      technology: ["RO", "UV", "UF", "Carbon"],
+      stagesOfPurification: 8,
+      storageCapacity: "External Tank Required",
+      purificationCapacity: "1000 LPH",
+      maxTDS: 3500,
+      material: "SS 304"
+    },
+    dimensions: {
+      height: "184 cm",
+      width: "197 cm",
+      depth: "92 cm",
+      weight: "400 kg"
+    },
+    tags: ["1000 LPH", "Automatic RO", "Industrial"]
+  },
+  {
+    id: 14,
+    name: "Leemart 2000 LPH Water Purifier",
+    price: {
+      current: 240000,
+      original: 300000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Commercial",
+    image: "/Products/Commercial/Leemart_2000_lph_water_purifier.webp",
+    description: "High-capacity pre-treatment and micron filtration system designed for 20-hour daily duty cycles.",
+    featured: false,
+    feature: [
+      "Working Design Upto 18-20 hours",
+      "Pre-treatment to remove organic impurities and dissolved gases",
+      "Micron filtration to remove impurities up to 5 micron",
+      "Low operation Cost And long life span",
+      "Easy to control and maintain"
+    ],
+    techSpecs: {
+      technology: ["Advanced RO", "Sand Filter", "Multi-Stage"],
+      stagesOfPurification: 9,
+      storageCapacity: "External Tank Required",
+      purificationCapacity: "2000 LPH",
+      maxTDS: 3000,
+      material: "SS / FRP"
+    },
+    dimensions: {
+      height: "195 cm",
+      width: "490 cm",
+      depth: "72 cm",
+      weight: "660 kg"
+    },
+    tags: ["2000 LPH", "Heavy Industrial", "Continuous Operation"]
+  },
+  {
+    id: 15,
+    name: "Leemart 5000 LPH Water Purifier",
+    price: {
+      current: 400000,
+      original: 500000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Commercial",
+    image: "/Products/Commercial/Leemart_5000_lph_water_purifier.webp",
+    description: "Massive scale water purification for factories and townships with advanced PLC-based control systems.",
+    featured: false,
+    feature: [
+      "Working Design Upto 18-20 hours",
+      "Pre-treatment to remove organic impurities and dissolved gases",
+      "Micron filtration to remove impurities up to 5 micron",
+      "Low operation Cost And long life span",
+      "Easy to control and maintain"
+    ],
+    techSpecs: {
+      technology: ["RO", "Dosing", "Pre-treatment"],
+      stagesOfPurification: 10,
+      storageCapacity: "External Tank Required",
+      purificationCapacity: "5000 LPH",
+      maxTDS: 2500,
+      material: "SS / FRP Skid"
+    },
+    dimensions: {
+      height: "230 cm",
+      width: "820 cm",
+      depth: "95 cm",
+      weight: "1350 kg"
+    },
+    tags: ["5000 LPH", "Township Purifier", "Plant"]
+  },
+  {
+    id: 16,
+    name: "Leemart 10000 LPH Water Purifier",
+    price: {
+      current: 472000,
+      original: 590000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Commercial",
+    image: "/Products/Commercial/Leemart_10000_lph_water_purifier.webp",
+    description: "Top-tier industrial RO plant for river and borewell water treatment at maximum efficiency.",
+    featured: false,
+    feature: [
+      "Working Design Upto 18-20 hours",
+      "Pre-treatment to remove organic impurities and dissolved gases",
+      "Micron filtration to remove impurities up to 5 micron",
+      "Low operation Cost And long life span",
+      "Easy to control and maintain"
+    ],
+    techSpecs: {
+      technology: ["RO", "PLC Control", "Industrial Filtration"],
+      stagesOfPurification: 10,
+      storageCapacity: "10000 Liter External Buffer",
+      purificationCapacity: "10000 LPH",
+      maxTDS: 2000,
+      material: "SS / Industrial Composite"
+    },
+    dimensions: {
+      height: "270 cm",
+      width: "865 cm",
+      depth: "120 cm",
+      weight: "2050 kg"
+    },
+    tags: ["10000 LPH", "Industrial Grade", "Water Treatment"]
+  }
+
 ];

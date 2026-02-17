@@ -48,32 +48,10 @@ export default function Services() {
           features: ["Food-grade materials", "High flow rate", "NSF certified", "24/7 support"]
         },
         {
-          name: "Office Building Solution",
-          description: "Centralized water treatment for multi-floor buildings",
-          features: ["Centralized system", "Multiple outlets", "Remote monitoring", "Maintenance included"]
-        }
-      ]
-    },
-    {
-      category: "Industrial Applications",
-      icon: "🏭",
-      description: "Heavy-duty purification systems for industrial processes",
-      solutions: [
-        {
           name: "Industrial RO Plant",
           description: "Large-scale reverse osmosis systems for manufacturing",
           features: ["High capacity", "Automated operation", "Quality monitoring", "Custom design"]
         },
-        {
-          name: "Process Water Treatment",
-          description: "Specialized treatment for specific industrial requirements",
-          features: ["Custom solutions", "Process optimization", "Compliance assured", "Expert consultation"]
-        },
-        {
-          name: "Wastewater Treatment",
-          description: "Comprehensive wastewater treatment and recycling systems",
-          features: ["Water recycling", "Environmental compliance", "Cost reduction", "Sustainable solution"]
-        }
       ]
     }
   ];
@@ -198,7 +176,7 @@ export default function Services() {
             <Button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-3">
               <Link href="/contact">Get Free Quote</Link>
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3">
+            <Button variant="outline" className="border-white text-blue-600 hover:bg-white/10 px-8 py-3">
               <Link href="/about">Learn About Us</Link>
             </Button>
           </div>

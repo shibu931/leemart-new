@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -42,33 +43,6 @@ export default function About() {
     }
   ];
 
-  const team = [
-    {
-      name: "Dr. Sarah Chen",
-      position: "Chief Technology Officer",
-      description: "15+ years in water treatment technology with PhD in Environmental Engineering.",
-      image: "👩‍🔬"
-    },
-    {
-      name: "Michael Rodriguez",
-      position: "Head of Operations",
-      description: "Expert in large-scale water system implementation and industrial solutions.",
-      image: "👨‍💼"
-    },
-    {
-      name: "Dr. James Wilson",
-      position: "Quality Assurance Director",
-      description: "Specialist in water quality testing and regulatory compliance.",
-      image: "👨‍🔬"
-    },
-    {
-      name: "Lisa Thompson",
-      position: "Customer Success Manager",
-      description: "Dedicated to ensuring exceptional customer experience and satisfaction.",
-      image: "👩‍💼"
-    }
-  ];
-
   const milestones = [
     {
       year: "2010",
@@ -95,6 +69,21 @@ export default function About() {
       title: "Market Leadership",
       description: "Recognized as a leading provider of water purification solutions"
     }
+  ];
+
+  const clients = [
+    "/clients/client001.jpg",
+    "/clients/client002.png",
+    "/clients/client003.jpeg",
+    "/clients/client004.jpeg",
+    "/clients/client005.png",
+    "/clients/client006.jpeg",
+    "/clients/client007.png",
+    "/clients/client008.jpeg",
+    "/clients/client009.png",
+    "/clients/client010.png",
+    "/clients/client011.jpg",
+    "/clients/client012.jpg",
   ];
 
   return (
@@ -136,7 +125,14 @@ export default function About() {
             </div>
             <div className="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl p-8">
               <div className="text-center">
-                <div className="text-6xl mb-4">💧</div>
+                <div className="relative w-24 h-24 mx-auto mb-4">
+                  <Image
+                    src="/logo-icon.webp"
+                    alt="Leemart Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Pure Water, Pure Trust</h3>
                 <p className="text-gray-700">
                   Over 14 years of excellence in water purification, serving communities and industries with innovative solutions.
@@ -241,28 +237,30 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Team */}
+      {/* Our Trusted Clients */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Meet Our Team
+              Our Trusted Clients
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Experienced professionals dedicated to delivering the best water purification solutions
+              We are proud to serve a diverse range of clients, from residential homes to large industrial facilities.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
-                <CardContent className="p-6">
-                  <div className="text-6xl mb-4">{member.image}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-blue-600 font-medium mb-3">{member.position}</p>
-                  <p className="text-gray-600 text-sm">{member.description}</p>
-                </CardContent>
-              </Card>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+            {clients.map((client, index) => (
+              <div key={index} className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:shadow-md transition-shadow duration-300">
+                <div className="relative w-full h-24">
+                  <Image
+                    src={client}
+                    alt={`Client ${index + 1}`}
+                    fill
+                    className="object-contain transition-all duration-300"
+                  />
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -281,7 +279,7 @@ export default function About() {
             <Button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-3">
               <Link href="/contact">Contact Us</Link>
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3">
+            <Button variant="outline" className="border-white text-blue-600 hover:bg-white/10 px-8 py-3">
               <Link href="/services">View Services</Link>
             </Button>
           </div>

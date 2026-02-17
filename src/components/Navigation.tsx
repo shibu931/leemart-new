@@ -1,8 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { ContactDialog } from '@/components/ContactDialog';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,8 +23,13 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">L</span>
+            <div className="relative w-8 h-8">
+              <Image
+                src="/logo-icon.webp"
+                alt="Leemart Logo"
+                fill
+                className="object-contain"
+              />
             </div>
             <span className="text-xl font-bold text-gray-900">Leemart</span>
           </Link>
@@ -38,9 +45,11 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600">
-              Get Quote
-            </Button>
+            <ContactDialog>
+              <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600">
+                Get Quote
+              </Button>
+            </ContactDialog>
           </div>
 
           {/* Mobile menu button */}
@@ -75,9 +84,11 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600">
-                  Get Quote
-                </Button>
+                <ContactDialog>
+                  <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600">
+                    Get Quote
+                  </Button>
+                </ContactDialog>
               </div>
             </div>
           </div>

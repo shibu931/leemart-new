@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -8,8 +9,13 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">L</span>
+              <div className="relative w-8 h-8">
+                <Image
+                  src="/logo-icon.webp"
+                  alt="Leemart Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="text-xl font-bold">Leemart</span>
             </div>
@@ -62,19 +68,19 @@ const Footer = () => {
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                 </svg>
-                info@leemart.com
+                info@leemartro.com
               </p>
               <p className="flex items-center">
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                 </svg>
-                +1 (555) 123-4567
+                +91 8076 602 998
               </p>
               <p className="flex items-start">
                 <svg className="w-4 h-4 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
                 </svg>
-                123 Water Street, Clean City, CC 12345
+                34-35, Balaji Complex, 102 first floor, Shakarpur, 110092 Delhi 110092
               </p>
             </div>
           </div>
