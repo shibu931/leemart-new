@@ -45,7 +45,7 @@ export default function Products() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <ProductsCatalog products={products} />
       </section>
     </div>

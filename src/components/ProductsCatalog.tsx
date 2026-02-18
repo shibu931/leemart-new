@@ -1,5 +1,6 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,8 +19,8 @@ type Product = {
   bulletPoints: string[];
   category: string;
   price: {
-    current: number;
-    original: number;
+    current: any;
+    original: any;
     currency: string;
     discountPercentage: number;
   };
@@ -28,35 +29,65 @@ type Product = {
 };
 
 export default function ProductsCatalog({ products }: { products: Product[] }) {
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  
   const [search, setSearch] = useState("");
-  const [sort, setSort] = useState<"name_asc" | "name_desc" | "price_asc" | "price_desc">("name_asc");
-  const [categories, setCategories] = useState<Record<Product["category"], boolean>>({
-    Residential: true,
-    Commercial: true,
+  const [sort, setSort] = useState<"name_asc" | "name_desc" | "price_asc" | "price_desc">("price_asc");
+  const [categories, setCategories] = useState<Record<Product["category"], boolean>>(() => {
+    if (categoryParam) {
+      return {
+        Residential: categoryParam === "Residential",
+        Commercial: categoryParam === "Commercial",
+      };
+    }
+    return {
+      Residential: true,
+      Commercial: true,
+    };
   });
 
-  const filtered = useMemo(() => {
+const filtered = useMemo(() => {
     const activeCats = Object.entries(categories)
       .filter(([, v]) => v)
       .map(([k]) => k as Product["category"]);
+      
     let list = products.filter(
       (p) =>
         activeCats.includes(p.category) &&
         (p.name.toLowerCase().includes(search.toLowerCase()) ||
           p.description.toLowerCase().includes(search.toLowerCase()))
     );
+    
     list = [...list].sort((a, b) => {
+      // Helper variables to safely check if a valid price exists
+      const hasPriceA = a.price && a.price.current != null;
+      const hasPriceB = b.price && b.price.current != null;
+
       switch (sort) {
         case "name_asc":
           return a.name.localeCompare(b.name);
         case "name_desc":
           return b.name.localeCompare(a.name);
         case "price_asc":
-          return a.price.current - b.price.current;
+          // If both have no price, keep them together
+          if (!hasPriceA && !hasPriceB) return 0;
+          // If only 'a' has no price, push to bottom
+          if (!hasPriceA) return 1;
+          // If only 'b' has no price, push to bottom
+          if (!hasPriceB) return -1;
+          // Standard sort if both have prices
+          return a.price!.current - b.price!.current;
         case "price_desc":
-          return b.price.current - a.price.current;
+          if (!hasPriceA && !hasPriceB) return 0;
+          if (!hasPriceA) return 1;
+          if (!hasPriceB) return -1;
+          return b.price!.current - a.price!.current;
+        default:
+          return 0;
       }
     });
+    
     return list;
   }, [products, search, sort, categories]);
 
@@ -168,7 +199,7 @@ export default function ProductsCatalog({ products }: { products: Product[] }) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="lg:hidden mb-6">
+      {/* <div className="lg:hidden mb-6">
         <details className="bg-white border rounded-lg shadow-sm">
           <summary className="cursor-pointer list-none px-4 py-3 font-semibold text-gray-900 flex items-center justify-between">
             Filters & Sort
@@ -176,10 +207,10 @@ export default function ProductsCatalog({ products }: { products: Product[] }) {
           </summary>
           <div className="p-4">{Filters}</div>
         </details>
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-1 lg:grid-cols-4 relative gap-8">
-        <div className="hidden lg:block lg:sticky lg:top-24 lg:self-start">{Filters}</div>
+        <div className="lg:block lg:sticky lg:top-24 lg:self-start">{Filters}</div>
 
         <div className="lg:col-span-3">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -217,7 +248,13 @@ export default function ProductsCatalog({ products }: { products: Product[] }) {
                     {product.name}
                   </h3>
 
-                  <div className="flex items-baseline gap-2 mb-4">
+                  {
+                    product.category === "Commercial" ? (
+                      <div>
+                      </div>
+                    ):
+                    (
+                      <div className="flex items-baseline gap-2 mb-4">
                     <span className="text-2xl font-bold text-gray-900">
                       {product.price.currency}{product.price?.current.toLocaleString()}
                     </span>
@@ -232,16 +269,18 @@ export default function ProductsCatalog({ products }: { products: Product[] }) {
                       </span>
                     )}
                   </div>
+                    )
+                  }
 
                   <p className="text-sm text-gray-600 mb-4 line-clamp-2 min-h-[2.5rem]">
                     {product.description}
                   </p>
 
                   <ul className="space-y-1.5 mb-6 flex-1">
-                    {product.bulletPoints.slice(0, 3).map((bp, i) => (
+                    {product.bulletPoints.map((bp, i) => (
                       <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
                         <span className="text-blue-500 mt-0.5">•</span>
-                        <span className="line-clamp-1">{bp}</span>
+                        <span className="">{bp}</span>
                       </li>
                     ))}
                   </ul>
