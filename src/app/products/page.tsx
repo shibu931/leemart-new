@@ -1,12 +1,17 @@
 import ProductsCatalog from "@/components/ProductsCatalog";
 import type { Metadata } from "next";
 import { products as dataProducts } from "../../../data/products";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Products - Leemart",
   description:
     "Explore Leemart water purification products for homes, offices, and industries etc.",
 };
+
+function ProductsContent({ products }: { products: any[] }) {
+  return <ProductsCatalog products={products} />;
+}
 
 export default function Products() {
   const slugify = (s: string) =>
@@ -46,7 +51,9 @@ export default function Products() {
       </section>
 
       <section className="py-10 bg-white">
-        <ProductsCatalog products={products} />
+        <Suspense fallback={<div className="text-center py-20">Loading products...</div>}>
+          <ProductsContent products={products} />
+        </Suspense>
       </section>
     </div>
   );
