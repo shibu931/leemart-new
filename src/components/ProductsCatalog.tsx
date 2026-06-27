@@ -39,11 +39,13 @@ export default function ProductsCatalog({ products }: { products: Product[] }) {
       return {
         Residential: categoryParam === "Residential",
         Commercial: categoryParam === "Commercial",
+        Softner: categoryParam === "Softner",
       };
     }
     return {
       Residential: true,
       Commercial: true,
+      Softner: true,
     };
   });
 
@@ -172,6 +174,11 @@ const filtered = useMemo(() => {
                 label: "Commercial",
                 icon: <Building2 className="size-4" />,
               },
+              {
+                key: "Softner" as const,
+                label: "Water Softners",
+                icon: <Building2 className="size-4" />,
+              },
             ].map((opt) => {
               const selected = categories[opt.key];
               return (
@@ -291,9 +298,9 @@ const filtered = useMemo(() => {
                         Order Now
                       </Button>
                     </ContactDialog>
-                    <Button variant="outline" className="flex-1 border-blue-200 text-blue-700 hover:bg-blue-50 hover:text-blue-800" size="sm">
+                    {/* <Button variant="outline" className="flex-1 border-blue-200 text-blue-700 hover:bg-blue-50 hover:text-blue-800" size="sm">
                       <Link href={`/products/${product.slug}`} className="w-full text-center">Details</Link>
-                    </Button>
+                    </Button> */}
                   </div>
                 </CardContent>
               </Card>

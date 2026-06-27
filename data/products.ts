@@ -269,6 +269,404 @@ export const products = [
     },
     tags: ["high-flow", "efficient"]
   },
+
+  {
+    id: 21,
+    name: "Leemart Blis",
+    price: {
+      current: 14999,
+      original: 20000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Residential",
+    image: "/Products/Leemart_bliss.png",
+    description: "Features 8-stage purification with RO+UV technology, copper and zinc cartridge for enhanced water quality, and alkaline enrichment for healthier drinking water",
+    featured: false,
+    feature: [
+      "ADVANCED PURIFICATION TECHNOLOGY",
+      "HIGH TDS COMPATIBILITY",
+      "GENEROUS CAPACITY",
+      "SMART DISPLAY AND DESIGN",
+      "EFFICIENT WATER SAVING",
+    ],
+    techSpecs: {
+      technology: ["RO", "UV", "UF", "Active Copper"],
+      stagesOfPurification: 7,
+      storageCapacity: 10,
+      purificationCapacity: 18, // Fast flow
+      maxTDS: 2000,
+      material: "Reinforced ABS"
+    },
+    dimensions: {
+      height: "45 cm",
+      width: "30 cm",
+      depth: "30 cm",
+      weight: "50 kg"
+    },
+    tags: ["high-flow", "efficient"]
+  },
+  {
+    id: 22,
+    name: "Leemart Iconic",
+    price: {
+      current: 12000,
+      original: 15000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Residential",
+    image: "/Products/Leemart_Iconic.png",
+    description: "A compact and efficient water purifier designed for residential use.",
+    featured: false,
+    feature: [
+      "10L Storage Tank",
+      "Classy Look",
+      "RO+UV+Alkaline",
+      "Heavy Build Quality"
+    ],
+    techSpecs: {
+      technology: ["RO", "Activated Carbon"],
+      stagesOfPurification: 5,
+      storageCapacity: "Optional External",
+      purificationCapacity: "50 LPH",
+      maxTDS: 1500,
+      material: "Stainless Steel"
+    },
+    dimensions: {
+      height: "90 cm",
+      width: "30 cm",
+      depth: "60 cm",
+      weight: "50 kg"
+    },
+    tags: ["high-flow", "efficient"]
+  },
+  {
+    id: 23,
+    name: "Leemart i7",
+    price: {
+      current: 18000,
+      original: 20000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Residential",
+    image: "/Products/Leemart_i7.png",
+    description: "A compact and efficient water purifier designed for residential use.",
+    featured: false,
+    feature: [
+      "Under The Sink Fit",
+      "RO + UV + Alkaline",
+      "10L Storage Tank Capacity",
+      "Easy to Install, Comes with Chrome Top"
+    ],
+    techSpecs: {
+      technology: ["RO", "Activated Carbon"],
+      stagesOfPurification: 5,
+      storageCapacity: "Optional External",
+      purificationCapacity: "50 LPH",
+      maxTDS: 1500,
+      material: "Stainless Steel"
+    },
+    dimensions: {
+      height: "90 cm",
+      width: "30 cm",
+      depth: "60 cm",
+      weight: "50 kg"
+    },
+    tags: ["high-flow", "efficient"]
+  },{
+    id: 24,
+    name: "Leemart Crux",
+    price: {
+      current: 14000,
+      original: 18000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Residential",
+    image: "/Products/Leemart_crux.png",
+    description: "A compact and efficient water purifier designed for residential use.",
+    featured: false,
+    feature: [
+      "Attractive Look",
+      "RO + UV + Alkaline Water Purifier",
+      "12L Water Storage Capacity",
+      "Z Black Color"
+    ],
+    techSpecs: {
+      technology: ["RO", "Activated Carbon"],
+      stagesOfPurification: 5,
+      storageCapacity: "Optional External",
+      purificationCapacity: "50 LPH",
+      maxTDS: 1500,
+      material: "Stainless Steel"
+    },
+    dimensions: {
+      height: "90 cm",
+      width: "30 cm",
+      depth: "60 cm",
+      weight: "50 kg"
+    },
+    tags: ["high-flow", "efficient"]
+  },{
+    id: 25,
+    name: "Leemart Swift",
+    price: {
+      current: 7999,
+      original: 10000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Residential",
+    image: "/Products/Leemart_Swift.jpg",
+    description: "A compact and efficient water purifier designed for residential use.",
+    featured: false,
+    feature: [
+      "Copper Zinc Alkaline Technology",
+      "Advanced RO+UV+UF Filteration System",
+      "15 Litre Storage Tank Capacity",
+      "TDS Adjuster for Customizable Water Taste"
+    ],
+    techSpecs: {
+      technology: ["RO", "Activated Carbon"],
+      stagesOfPurification: 5,
+      storageCapacity: "Optional External",
+      purificationCapacity: "50 LPH",
+      maxTDS: 1500,
+      material: "Stainless Steel"
+    },
+    dimensions: {
+      height: "90 cm",
+      width: "30 cm",
+      depth: "60 cm",
+      weight: "50 kg"
+    },
+    tags: ["high-flow", "efficient"]
+  },{
+    id: 26,
+    name: "Leemart Vedaa",
+    price: {
+      current: 10000,
+      original: 12000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Residential",
+    image: "/Products/Leemart_vedaa.jpg",
+    description: "",
+    featured: false,
+    feature: [
+      "Sleek Premium Black Design",
+      "Advanced 5-Stage Purification System",
+      "Generous 10-Liter Storage Capacity",
+      "Versatile for Both Home and Small Business Use",
+      "Cutting-Edge Reverse Osmosis Technology",
+      "Elegant and Modern Aesthetic"
+
+    ],
+    techSpecs: {
+      technology: ["RO", "Activated Carbon"],
+      stagesOfPurification: 5,
+      storageCapacity: "Optional External",
+      purificationCapacity: "50 LPH",
+      maxTDS: 1500,
+      material: "Stainless Steel"
+    },
+    dimensions: {
+      height: "90 cm",
+      width: "30 cm",
+      depth: "60 cm",
+      weight: "50 kg"
+    },
+    tags: ["high-flow", "efficient"]
+  },{
+    id: 27,
+    name: "Leemart STARLI",
+    price: {
+      current: 14000,
+      original: 18000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Residential",
+    image: "/Products/Leemart_starli.jpg",
+    description: "",
+    featured: false,
+    feature: [
+      "ADVANCED PURIFICATION",
+      "SLEEK DESIGN",
+      "CONVENIENT DISPENSING",
+      "LARGE CAPACITY",
+      "DURABLE CONSTRUCTION"
+    ],
+    techSpecs: {
+      technology: ["RO", "Activated Carbon"],
+      stagesOfPurification: 5,
+      storageCapacity: "Optional External",
+      purificationCapacity: "50 LPH",
+      maxTDS: 1500,
+      material: "Stainless Steel"
+    },
+    dimensions: {
+      height: "90 cm",
+      width: "30 cm",
+      depth: "60 cm",
+      weight: "50 kg"
+    },
+    tags: ["high-flow", "efficient"]
+  },
+  {
+    id: 28,
+    name: "Leemart Water Softner 10A",
+    price: {
+      current: 30000,
+      original: 35000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Softner",
+    image: "/Products/Leemart_Water_Softner10A.png",
+    description: "A compact and efficient water softener designed for residential use.",
+    featured: false,
+    feature: [
+      "Easy to install and ready to use",
+      "Elegant designed, cabinet type water softener",
+      "Fully automatic microprocessor-controlling operation",
+      "Display - current time, remaining soft water & current flow",
+      "Inbuilt brine tank, brine valve and float assembly",
+      "Can be use for bathroom, washing machine and dish washer"
+    ],
+    techSpecs: {
+      technology: ["RO", "Activated Carbon"],
+      stagesOfPurification: 5,
+      storageCapacity: "Optional External",
+      purificationCapacity: "50 LPH",
+      maxTDS: 1500,
+      material: "Stainless Steel"
+    },
+    dimensions: {
+      height: "90 cm",
+      width: "30 cm",
+      depth: "60 cm",
+      weight: "50 kg"
+    },
+    tags: ["high-flow", "efficient"]
+  },
+
+  {
+    id: 29,
+    name: "Leemart Water Softner Mini Pro",
+    price: {
+      current: 10000,
+      original: 15000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Softner",
+    image: "/Products/Leemart_Water_SoftnerMiniPro.png",
+    description: "A compact and efficient water softener designed for residential use.",
+    featured: false,
+    feature: [
+      "Max. Flow Rate: 600LPH",
+      "OBSA (Basis on 200ppm): 6000 Ltr",
+      "OBR (Basis on 200ppm): 1500 Ltr",
+      "Resin Tank Volume: 8 Ltr",
+      "Resin Quantity: 6 Ltr",
+      "Salt Tank Volume: 8 Ltr",
+      "Salt Requried/Regeneration: 0.9 Kg",
+    ],
+    techSpecs: {
+      technology: ["RO", "Activated Carbon"],
+      stagesOfPurification: 5,
+      storageCapacity: "Optional External",
+      purificationCapacity: "50 LPH",
+      maxTDS: 1500,
+      material: "Stainless Steel"
+    },
+    dimensions: {
+      height: "90 cm",
+      width: "30 cm",
+      depth: "60 cm",
+      weight: "50 kg"
+    },
+    tags: ["high-flow", "efficient"]
+  },
+  {
+    id: 31,
+    name: "Leemart Water Softner Nano Pro",
+    price: {
+      current: 11500,
+      original: 16500,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Softner",
+    image: "/Products/Leemart_Water_SoftnerNanoPro.png",
+    description: "A compact and efficient water softener designed for residential use.",
+    featured: false,
+    feature: [
+      "Max. Flow Rate: 500LPH",
+      "OBSA (Basis on 200ppm): 6250 Ltr",
+      "OBR (Basis on 200ppm): 635 Ltr",
+      "Resin Tank Volume: 8 Ltr",
+      "Resin Quantity: 2.5 Ltr",
+      "Salt Tank Volume: 8 Ltr",
+      "Salt Requried/Regeneration: 0.375 Kg",
+    ],
+    techSpecs: {
+      technology: ["RO", "Activated Carbon"],
+      stagesOfPurification: 5,
+      storageCapacity: "Optional External",
+      purificationCapacity: "50 LPH",
+      maxTDS: 1500,
+      material: "Stainless Steel"
+    },
+    dimensions: {
+      height: "90 cm",
+      width: "30 cm",
+      depth: "60 cm",
+      weight: "50 kg"
+    },
+    tags: ["high-flow", "efficient"]
+  },
+
+  {
+    id: 30,
+    name: "Leemart 1000LPH Water Softner",
+    price: {
+      current: 50000,
+      original: 60000,
+      currency: "₹",
+      discountPercentage: 20,
+    },
+    category: "Softner",
+    image: "/Products/Leemart_1000LPH_Water_Softner.png",
+    description: "Are you still using the traditional methods to remove turbidity from water? It's time to switch to Sand Filter - softener 1000L, a whole house sand filter softener",
+    featured: false,
+    feature: [
+      "High Flow Rate: The 1000L capacity ensures a high flow rate, making it suitable for larger households or small commercial applications.",
+      "Durable Construction: Made from high-quality materials, this sand filter softener is built to last and withstand the rigors of daily use.",
+      "Easy Maintenance: The design allows for easy backwashing and maintenance, ensuring that the system remains efficient over time.",
+      "Effective Filtration: The sand media effectively removes turbidity, sediment, and other impurities from water, providing cleaner and safer water for your home or business."
+    ],
+    techSpecs: {
+      technology: ["RO", "Activated Carbon"],
+      stagesOfPurification: 5,
+      storageCapacity: "Optional External",
+      purificationCapacity: "50 LPH",
+      maxTDS: 1500,
+      material: "Stainless Steel"
+    },
+    dimensions: {
+      height: "90 cm",
+      width: "30 cm",
+      depth: "60 cm",
+      weight: "50 kg"
+    },
+    tags: ["high-flow", "efficient"]
+  },
+
   {
     id: 10,
     name: "Leemart 50 LPH Water Purifier",
@@ -304,6 +702,7 @@ export const products = [
     },
     tags: ["Commercial RO", "50 LPH", "Office Purifier"]
   },
+
   {
     id: 11,
     name: "Leemart 100 LPH Water Purifier",

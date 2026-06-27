@@ -43,31 +43,42 @@ export default function Home() {
   return (
     <div className="">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100 py-12 lg:py-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="relative hero-banner py-12 lg:py-32 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 -z-10 w-full h-full object-cover"
+          src="/hero-banner.mp4"
+        />
+        <div className="absolute inset-0 bg-gray-800/20"/>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
             {/* Content Column */}
-            <div className="text-center lg:text-left">
-              <p className="text-xs md:text-sm text-blue-600 font-semibold mb-4 tracking-wider flex items-center justify-center lg:justify-start">
+            <div className="text-center">
+              <p className="text-xs md:text-sm text-blue-600 font-semibold mb-4 tracking-wider flex items-center justify-center text-shadow-lg text-shadow-black/20">
                 <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-2">
                   <span className="text-white text-xs">✓</span>
                 </span>
                 Trusted by 10,000+ Customers
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-blue-500 mb-6 text-shadow-lg text-shadow-gray-700/10">
                 Safe, Pure &
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+                {/* <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500"> */}
+                  <br/>
                   Sustainable
-                </span>
+                  <br/>
+                {/* </span> */}
                 Water Solutions
               </h1>
-              <p className="text-lg lg:text-xl text-gray-600 mb-8 max-w-2xl lg:max-w-none">
+              <p className="text-lg lg:text-xl text-gray-200 text-shadow-md text-shadow-black mb-8 max-w-2xl lg:max-w-none">
                 Leemart delivers crystal-clear water with cutting-edge RO, UV,
                 and alkaline purification technologies. We serve both
                 residential and industrial clients, ensuring the highest safety
                 standards.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center ">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
@@ -87,10 +98,9 @@ export default function Home() {
             {/* Hero Image Column */}
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative">
-                {/* Background decorative circle */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-full opacity-20 transform scale-110"></div>
 
-                {/* Hero Image */}
+                {/* <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-full opacity-20 transform scale-110"></div>
+
                 <div className="relative z-10 w-80 h-96 lg:w-[540px] lg:h-[500px]">
                   <Image
                     src="/leemart_banner.webp"
@@ -99,24 +109,25 @@ export default function Home() {
                     height={500}
                     className="w-full h-full object-contain"
                   />
-                </div>
+                </div> */}
 
-                {/* Floating elements around the image */}
-                <div className="absolute top-10 -left-5 w-8 h-8 bg-blue-400 rounded-full opacity-30 animate-bounce"></div>
+                {/* <div className="absolute top-10 -left-5 w-8 h-8 bg-blue-400 rounded-full opacity-30 animate-bounce"></div>
                 <div className="absolute top-32 -right-8 w-6 h-6 bg-cyan-400 rounded-full opacity-40 animate-pulse"></div>
                 <div className="absolute bottom-20 -left-8 w-5 h-5 bg-blue-500 rounded-full opacity-35 animate-bounce delay-300"></div>
-                <div className="absolute bottom-40 right-5 w-4 h-4 bg-cyan-300 rounded-full opacity-25 animate-pulse delay-500"></div>
+                <div className="absolute bottom-40 right-5 w-4 h-4 bg-cyan-300 rounded-full opacity-25 animate-pulse delay-500"></div> */}
               </div>
             </div>
+
           </div>
         </div>
 
         {/* Background floating water drops animation */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-3 h-3 bg-blue-400 rounded-full opacity-15 animate-bounce"></div>
           <div className="absolute top-60 right-20 w-4 h-4 bg-cyan-400 rounded-full opacity-20 animate-pulse"></div>
           <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-blue-500 rounded-full opacity-18 animate-bounce delay-300"></div>
-        </div>
+        </div> */}
+
       </section>
 
       {/* Residential Products Section */}
@@ -218,10 +229,10 @@ export default function Home() {
               .filter((product) => product.category === "Commercial")
               .slice(0, 4)
               .map((product) => (
-                <Link
-                  key={product.id}
-                  href={`/products/${product.name.replace(/\s+/g, "-").toLowerCase()}`}
-                >
+                // <Link
+                //   key={product.id}
+                //   href={`/products/${product.name.replace(/\s+/g, "-").toLowerCase()}`}
+                // >
                   <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer h-full">
                     <CardContent className="p-0">
                       <div className="relative w-full h-64 rounded-t-lg overflow-hidden">
@@ -249,7 +260,7 @@ export default function Home() {
                       </div>
                     </CardContent>
                   </Card>
-                </Link>
+                // </Link>
               ))}
           </div>
 
